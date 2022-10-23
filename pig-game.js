@@ -55,17 +55,23 @@ if (dice !== 1) {
 });
 
 btnHold.addEventListener('click', function () {
-// add current scote to active plays score
-scores[activeplayer] += currentScore;
+// add current score to active plays score
+scores[activePlayer] += currentScore;
 // same as scores[1] = scores[1] + currentscore
 
 document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
 // check if players score is >= 100
+if (scores[activePlayer] >= 20) {
 // win finish the game
+document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+} else {
+    //and switch to next player
+    switchPlayer();
+}
 
-//and switch to next player
-switchPlayer();
+
 })
 
 
