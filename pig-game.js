@@ -4,7 +4,7 @@
 const score0El = document.querySelector('#score--0');
 const score1El = document.getElementById('score--1');
 const diceEl = document.querySelector('.dice');
-const btnNew = document.querySElector('.btn--new');
+const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
@@ -18,7 +18,7 @@ diceEl.classList.add('hidden');
 
 btnRoll.addEventListener('click', function() {
     //generate a random dice roll
-   const dice = Math.trunck(Math.random()*6) +1;
+   const dice = Math.trunc(Math.random()*6) +1;
 
     // dislay the dice image
    diceEl.classList.remove('hidden');
