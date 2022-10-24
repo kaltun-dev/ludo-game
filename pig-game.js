@@ -16,7 +16,7 @@ const btnHold = document.querySelector('.btn--hold');
 
 let scores, currentScore, activePlayer, playing;
 
-//starting constions
+//starting condtions and init/reset btn
 const init = function () {
 scores = [0,0];
 currentScore = 0;
@@ -89,6 +89,6 @@ document.querySelector(`.player--${activePlayer}`).classList.remove('player--act
 }
 });
 
-
+//reset buttun
 btnNew.addEventListener('click', init);
 
