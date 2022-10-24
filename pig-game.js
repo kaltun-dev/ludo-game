@@ -76,7 +76,7 @@ scores[activePlayer] += currentScore;
 document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
 // check if players score is >= 100
-if (scores[activePlayer] >= 20) {
+if (scores[activePlayer] >= 100) {
 // win finish the game
 playing = false;
 diceEl.classList.add('hidden');
