@@ -19,7 +19,7 @@ score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
 
-const scores = [0,0];
+let scores = [0,0];
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
@@ -68,6 +68,7 @@ document.getElementById(`score--${activePlayer}`).textContent = scores[activePla
 if (scores[activePlayer] >= 20) {
 // win finish the game
 playing = false;
+diceEl.classList.add('hidden');
 document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
 document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
 } else {
@@ -78,4 +79,26 @@ document.querySelector(`.player--${activePlayer}`).classList.remove('player--act
 });
 
 
+btnNew.addEventListener('click', function () {
+    //scores = [0,0];
+     currentScore = 0;
+     score0El = 0;
+     score1El = 0;
+     score0El.textContent = 0;
+     score1El.textContent = 0;
+     activePlayer = activePlayer;
+     scores = [0,0];
+     playing = true;
+     diceEl.classList.remove('hidden');
+     document.querySelector('.player--0').classList.remove('player--winner');
+     document.querySelector('.player--1').classList.remove('player--winner');
+     document.querySelector('.player--0').classList.add('player--active');
+     document.querySelector('.player--1').classList.remove('player--active');
+
+
+})
+// reset scores to 0
+// reset hold to zero
+//hide dice
+//show buttuns again
 
